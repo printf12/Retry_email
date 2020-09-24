@@ -2,6 +2,7 @@ package com.mhp.coding.challenges.retry.core.entities;
 
 import lombok.Data;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Data
@@ -32,6 +33,7 @@ public class EmailNotification {
     }
 
     @NotBlank
+    @Email(message = "Email should be valid")
     private String recipient;
 
     @NotBlank
