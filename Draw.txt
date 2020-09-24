@@ -1,0 +1,62 @@
+RequestMapping need Postman Chrome extension fastest way to have it
+
+
+1)need to setup spring boot in your ide( eclipse or intellij)
+2) install docker for Windows in your laptop ( if you're using Windows os) 
+3)Clone the task into ide
+4)run docker-compose up to download the required db from the task
+5) split the task ( acceptance criteria ) into smaller talks 
+For example: it always returns 200( success) 
+Now i need to implement status 400x and 500x
+
+implement a thread class and set the timer in it to 5 seconds(this is for each retry) 
+1 st retry -----wait 5 seconds-->
+2nd retry -----wait 5 seconds-->
+...
+5th retry---> wait 5 seconds
+( This whole process will happen for each email notification) 
+
+Similarly do the second and third.
+
+
+
+
+This error means my  Tom cat server is running correctly.
+
+But unable to find the URL with email at the end.
+
+
+Change the browser to v1
+i ve Put a debugger point on line 23 and try to debug the app.
+
+Instead of throwing / returning this error, return 500 for internal server error or 404 for resource not found
+
+
+2) i need to Right now am doing  5 retries 
+
+
+---------------------------------
+i need to create two new services in the code.
+1) crash notification service 
+2) restart notification service
+--------------------------------
+1 retry ----- successful 
+2 retry -----successful 
+Then the sntp server crashes or goes kaputtt 
+the notification service should send an error notification to the crash notification service and the crash notification 
+service will start the notification service again. 
+Which means my notification service should pass the retry number to 
+crash notification service and crash notification service will send retry number ( which is 2) back to 
+notification service and notification service will execute the remaining tries( whick is 3) 
+
+-------------------------------
+
+
+I just need to pass the retry number from
+Notification->crash->restart-> notification( and this time the number of retry will be 3 not 5) 
+
+
+
+
+
+
